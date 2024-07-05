@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\Common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\ClearScreen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\ClearScreenMultiWindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\BasicTriangle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\BasicVertexBuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\CullMode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\BasicStencil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\InstancedIndexed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\TexturedQuad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\TexturedAnimatedQuad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\BasicCompute.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\ComputeUniforms.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\ToneMapping.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\CustomSampling.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\DrawIndirect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\ComputeSpriteBatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\CopyAndReadback.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\git\sdlgpu\SDL_gpu_examples\SDL_gpu_examples.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\git\sdlgpu\SDL_gpu_examples\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\git\sdlgpu\SDL_gpu_examples\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{67FD8230-F337-366C-B642-DA9A731CA189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F06E54DE-BCC2-3DD2-B8C5-7B22DEFE2754}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
