@@ -4,3 +4,4 @@ build/
 /CMakeFiles/
 /SDL_gpu_examples.dir/
 /x64/
+/Debug/

@@ -55,6 +55,9 @@
     <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\CopyAndReadback.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\CopyConsistency.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\git\sdlgpu\SDL_gpu_examples\SDL_gpu_examples.h">
