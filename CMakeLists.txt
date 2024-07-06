@@ -24,6 +24,8 @@ add_executable(SDL_gpu_examples
     Examples/ComputeSpriteBatch.c
     Examples/CopyAndReadback.c
     Examples/CopyConsistency.c
+    Examples/Texture2DArray.c
+    Examples/TriangleMSAA.c
 )
 
 target_include_directories(SDL_gpu_examples PRIVATE .)

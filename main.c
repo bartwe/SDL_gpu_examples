@@ -18,7 +18,9 @@ static Example* Examples[] =
 	&DrawIndirect_Example,
 	&ComputeSpriteBatch_Example,
 	&CopyAndReadback_Example,
-	&CopyConsistency_Example
+	&CopyConsistency_Example,
+	&Texture2DArray_Example,
+	&TriangleMSAA_Example,
 };
 
 int main(int argc, char **argv)
