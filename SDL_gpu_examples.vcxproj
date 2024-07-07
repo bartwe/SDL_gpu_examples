@@ -397,6 +397,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\ComputeSpriteBatch.c" />
     <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\CopyAndReadback.c" />
     <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\CopyConsistency.c" />
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\Texture2DArray.c" />
+    <ClCompile Include="C:\git\sdlgpu\SDL_gpu_examples\Examples\TriangleMSAA.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\git\sdlgpu\SDL_gpu_examples\ZERO_CHECK.vcxproj">
