@@ -44,7 +44,7 @@ void CommonQuit(Context* context)
 	SDL_GpuDestroyDevice(context->Device);
 }
 
-static char* BasePath = NULL;
+static const char* BasePath = NULL;
 void InitializeAssetLoader()
 {
 	BasePath = SDL_GetBasePath();
