@@ -27,9 +27,10 @@ add_executable(SDL_gpu_examples
     Examples/Texture2DArray.c
     Examples/TriangleMSAA.c
     Examples/Cubemap.c
+    Examples/WindowResize.c
 )
 
-target_include_directories(SDL_gpu_examples PRIVATE .)
+target_include_directories(SDL_gpu_examples PRIVATE . spirv)
 
 target_link_libraries(SDL_gpu_examples
     SDL3::SDL3
