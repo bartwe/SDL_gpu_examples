@@ -1,6 +1,6 @@
 /* Special thanks to Matt Taylor for this overview of tonemapping: https://64.github.io/tonemapping/ */
 
-#include <SDL_gpu_examples.h>
+#include "Common.h"
 
 static SDL_GpuTexture* HDRTexture;
 static SDL_GpuTexture* ToneMapTexture;
@@ -87,7 +87,7 @@ static int Init(Context* context)
 	}
 
     int img_x, img_y, n;
-    float *hdrImageData = LoadImage("memorial.hdr", &img_x, &img_y, &n, 4, SDL_TRUE);
+    float *hdrImageData = LoadHDRImage("memorial.hdr", &img_x, &img_y, &n, 4);
 
     if (hdrImageData == NULL)
     {
