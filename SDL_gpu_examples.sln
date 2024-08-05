@@ -19,6 +19,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{9FC4F044-9623-3DB3-9623-9C5E35FF2AF9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL3-shared", "..\SDLBuild\SDL3-shared.vcxproj", "{8B603EF1-18D0-3AEF-9217-16BDDF32245C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9FC4F044-9623-3DB3-9623-9C5E35FF2AF9} = {9FC4F044-9623-3DB3-9623-9C5E35FF2AF9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
