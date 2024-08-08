@@ -171,26 +171,12 @@ static int Init(Context* context)
 		SDL_GPU_TRANSFERBUFFERUSAGE_UPLOAD,
 		imageSizeInBytes * 2
 	);
-	SDL_GpuSetTransferData(
-		context->Device,
-		imageData1->pixels,
-		&(SDL_GpuTransferBufferRegion) {
-			.transferBuffer = textureTransferBuffer,
-			.offset = 0,
-			.size = imageSizeInBytes
-		},
-		SDL_FALSE
-	);
-	SDL_GpuSetTransferData(
-		context->Device,
-		imageData2->pixels,
-		&(SDL_GpuTransferBufferRegion) {
-			.transferBuffer = textureTransferBuffer,
-			.offset = imageSizeInBytes,
-			.size = imageSizeInBytes
-		},
-		SDL_FALSE
-	);
+
+	Uint8* textureTransferPtr;
+	SDL_GpuMapTransferBuffer(context->Device, textureTransferBuffer, SDL_FALSE, &textureTransferPtr);
+	SDL_memcpy(textureTransferPtr, imageData1->pixels, imageSizeInBytes);
+	SDL_memcpy(textureTransferPtr + imageSizeInBytes, imageData2->pixels, imageSizeInBytes);
+	SDL_GpuUnmapTransferBuffer(context->Device, textureTransferBuffer);
 
 	// Upload the transfer data to the GPU resources
 	SDL_GpuCommandBuffer* uploadCmdBuf = SDL_GpuAcquireCommandBuffer(context->Device);
@@ -296,7 +282,7 @@ static int Draw(Context* context)
 		SDL_GpuBindVertexBuffers(renderPass, 0, &(SDL_GpuBufferBinding){ .buffer = VertexBuffer, .offset = 0 }, 1);
 		SDL_GpuBindIndexBuffer(renderPass, &(SDL_GpuBufferBinding){ .buffer = IndexBuffer, .offset = 0 }, SDL_GPU_INDEXELEMENTSIZE_16BIT);
 		SDL_GpuBindFragmentSamplers(renderPass, 0, &(SDL_GpuTextureSamplerBinding){ .texture = Texture, .sampler = Sampler }, 1);
-		SDL_GpuDrawIndexedPrimitives(renderPass, 0, 0, 2 * 3, 1);
+		SDL_GpuDrawIndexedPrimitives(renderPass, 0, 0, 6, 1);
 
 		SDL_GpuEndRenderPass(renderPass);
 	}
