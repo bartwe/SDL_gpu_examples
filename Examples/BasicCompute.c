@@ -77,6 +77,13 @@ static int Init(Context* context)
 				.offset = sizeof(float) * 3
 			}}
 		},
+        .rasterizerState = {
+			.fillMode = SDL_GPU_FILLMODE_FILL,
+			.cullMode = SDL_GPU_CULLMODE_NONE,
+			.frontFace = SDL_GPU_FRONTFACE_COUNTER_CLOCKWISE,
+			.depthBiasEnable = SDL_FALSE
+		},
+		.multisampleState.sampleCount = SDL_GPU_SAMPLECOUNT_1,
         .multisampleState.sampleMask = 0xFFFF,
         .vertexShader = vertexShader,
         .fragmentShader = fragmentShader
@@ -100,7 +107,11 @@ static int Init(Context* context)
 
     Sampler = SDL_GpuCreateSampler(context->Device, &(SDL_GpuSamplerCreateInfo){
         .addressModeU = SDL_GPU_SAMPLERADDRESSMODE_REPEAT,
-        .addressModeV = SDL_GPU_SAMPLERADDRESSMODE_REPEAT
+        .addressModeV = SDL_GPU_SAMPLERADDRESSMODE_REPEAT,
+        .addressModeW = SDL_GPU_SAMPLERADDRESSMODE_REPEAT,
+        .minFilter = SDL_GPU_FILTER_NEAREST,
+        .magFilter = SDL_GPU_FILTER_NEAREST,
+        .mipmapMode = SDL_GPU_SAMPLERMIPMAPMODE_NEAREST,
     });
 
     VertexBuffer = SDL_GpuCreateBuffer(

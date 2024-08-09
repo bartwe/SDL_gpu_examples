@@ -2,8 +2,8 @@
 
 static Example* Examples[] =
 {
-	&ClearScreen_Example,
-	&ClearScreenMultiWindow_Example,
+//	&ClearScreen_Example,
+//	&ClearScreenMultiWindow_Example,
 	&BasicTriangle_Example,
 	&BasicVertexBuffer_Example,
 	&CullMode_Example,

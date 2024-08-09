@@ -48,6 +48,13 @@ static int Init(Context* context)
 				}
 			}},
 		},
+		.rasterizerState = {
+			.fillMode = SDL_GPU_FILLMODE_FILL,
+			.cullMode = SDL_GPU_CULLMODE_NONE,
+			.frontFace = SDL_GPU_FRONTFACE_COUNTER_CLOCKWISE,
+			.depthBiasEnable = SDL_FALSE
+		},
+		.multisampleState.sampleCount = SDL_GPU_SAMPLECOUNT_1,
 		.multisampleState.sampleMask = 0xFFFF,
 		.primitiveType = SDL_GPU_PRIMITIVETYPE_TRIANGLELIST,
 		.vertexShader = vertexShader,
@@ -56,7 +63,7 @@ static int Init(Context* context)
 
 	for (int i = 0; i < SDL_arraysize(Pipelines); i += 1)
 	{
-		SDL_GpuSampleCount sampleCount = (SDL_GpuSampleCount) i;
+		SDL_GpuSampleCount sampleCount = SDL_GPU_SAMPLECOUNT_1 + (SDL_GpuSampleCount) i;
 		pipelineCreateInfo.multisampleState.sampleCount = SDL_GpuGetBestSampleCount(
 			context->Device,
 			RTFormat,
