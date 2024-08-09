@@ -129,7 +129,8 @@ static int Init(Context* context)
 		.depth = 1,
 		.layerCount = 2,
 		.levelCount = 1,
-		.usageFlags = SDL_GPU_TEXTUREUSAGE_SAMPLER_BIT
+		.usageFlags = SDL_GPU_TEXTUREUSAGE_SAMPLER_BIT,
+		.sampleCount = SDL_GPU_SAMPLECOUNT_1
 	});
 
 	Sampler = SDL_GpuCreateSampler(context->Device, &(SDL_GpuSamplerCreateInfo){

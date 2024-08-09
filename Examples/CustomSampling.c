@@ -120,7 +120,8 @@ static int Init(Context* context)
 		.depth = 1,
 		.layerCount = 1,
 		.levelCount = 1,
-		.usageFlags = SDL_GPU_TEXTUREUSAGE_GRAPHICS_STORAGE_READ_BIT
+		.usageFlags = SDL_GPU_TEXTUREUSAGE_GRAPHICS_STORAGE_READ_BIT,
+		.sampleCount = SDL_GPU_SAMPLECOUNT_1
 	});
 
 	// Set up buffer data
