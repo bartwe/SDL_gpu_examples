@@ -169,7 +169,7 @@ static int Init(Context* context)
 	);
 
 	Uint8* textureTransferPtr;
-	SDL_GpuMapTransferBuffer(context->Device, textureTransferBuffer, SDL_FALSE, &textureTransferPtr);
+	SDL_GpuMapTransferBuffer(context->Device, textureTransferBuffer, SDL_FALSE, (void**) &textureTransferPtr);
 	SDL_memcpy(textureTransferPtr, imageData->pixels, imageData->w * imageData->h * 4);
 	SDL_GpuUnmapTransferBuffer(context->Device, textureTransferBuffer);
 
@@ -250,7 +250,7 @@ static int Draw(Context* context)
 	{
 		SDL_GpuColorAttachmentInfo colorAttachmentInfo = { 0 };
 		colorAttachmentInfo.textureSlice.texture = swapchainTexture;
-		colorAttachmentInfo.clearColor = (SDL_GpuColor){ 0.0f, 0.0f, 0.0f, 1.0f };
+		colorAttachmentInfo.clearColor = (SDL_FColor){ 0.0f, 0.0f, 0.0f, 1.0f };
 		colorAttachmentInfo.loadOp = SDL_GPU_LOADOP_CLEAR;
 		colorAttachmentInfo.storeOp = SDL_GPU_STOREOP_STORE;
 

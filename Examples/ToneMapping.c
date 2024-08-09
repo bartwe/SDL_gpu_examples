@@ -79,7 +79,7 @@ static SDL_GpuComputePipeline* BuildPostProcessComputePipeline(SDL_GpuDevice *de
 static int Init(Context* context)
 {
     /* Manually set up example for HDR rendering */
-    context->Device = SDL_GpuCreateDevice(SDL_GPU_BACKEND_ALL, SDL_TRUE, SDL_FALSE);
+    context->Device = SDL_GpuCreateDevice(SDL_TRUE, SDL_FALSE, SDL_CreateProperties());
 	if (context->Device == NULL)
 	{
 		SDL_Log("GpuCreateDevice failed");
@@ -164,7 +164,7 @@ static int Init(Context* context)
     );
 
     Uint8* imageTransferPtr;
-    SDL_GpuMapTransferBuffer(context->Device, imageDataTransferBuffer, SDL_FALSE, &imageTransferPtr);
+    SDL_GpuMapTransferBuffer(context->Device, imageDataTransferBuffer, SDL_FALSE, (void**) &imageTransferPtr);
     SDL_memcpy(imageTransferPtr, hdrImageData, sizeof(float) * 4 * img_x * img_y);
     SDL_GpuUnmapTransferBuffer(context->Device, imageDataTransferBuffer);
 
