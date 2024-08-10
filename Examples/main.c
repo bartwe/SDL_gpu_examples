@@ -2,8 +2,8 @@
 
 static Example* Examples[] =
 {
-//	&ClearScreen_Example,
-//	&ClearScreenMultiWindow_Example,
+	&ClearScreen_Example,
+	&ClearScreenMultiWindow_Example,
 	&BasicTriangle_Example,
 	&BasicVertexBuffer_Example,
 	&CullMode_Example,
@@ -11,18 +11,20 @@ static Example* Examples[] =
 	&InstancedIndexed_Example,
 	&TexturedQuad_Example,
 	&TexturedAnimatedQuad_Example,
-	&BasicCompute_Example,
-	&ComputeUniforms_Example,
-	&ToneMapping_Example,
+
 	&CustomSampling_Example,
 	&DrawIndirect_Example,
-	&ComputeSpriteBatch_Example,
 	&CopyAndReadback_Example,
 	&CopyConsistency_Example,
 	&Texture2DArray_Example,
 	&TriangleMSAA_Example,
 	&Cubemap_Example,
 	&WindowResize_Example,
+
+	&BasicCompute_Example,
+	&ComputeUniforms_Example,
+	&ToneMapping_Example,
+	&ComputeSpriteBatch_Example,
 };
 
 int main(int argc, char **argv)
